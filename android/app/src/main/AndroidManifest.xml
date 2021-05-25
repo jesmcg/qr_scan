@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.qr_reader">
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
    <application
         android:label="qr_reader"
         android:icon="@mipmap/ic_launcher">
@@ -37,5 +38,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDrW1C08wbouUxGG6PO3478yT9nFtCryH0"/>
     </application>
 </manifest>

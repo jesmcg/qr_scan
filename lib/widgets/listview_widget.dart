@@ -3,6 +3,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 
 import 'package:provider/provider.dart';
 import 'package:qr_reader/providers/scan_list_provider.dart';
+import 'package:qr_reader/utils/utils.dart';
 
 class ListViewWidget extends StatefulWidget {
   const ListViewWidget({@required this.tipo});
@@ -66,7 +67,7 @@ class _ListViewWidgetState extends State<ListViewWidget> {
             title: Text(scans[i].valor!),
             subtitle: Text('ID: ${scans[i].id}'),
             trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () => print('ID: ${scans[i].id}'),
+            onTap: () => launchURL(context, scans[i]),
           ),
         ),
         actions: <Widget>[
